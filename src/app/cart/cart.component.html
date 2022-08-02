@@ -1,0 +1,12 @@
+<h3>Cart</h3>
+
+<div *ngIf="items.length > 0; else noItems">
+  <div class="cart-item" *ngFor="let item of items">
+    <span>{{ item.name }}</span>
+    <span>{{ item.price | currency }}</span>
+  </div>
+</div>
+
+<ng-template #noItems>
+  <h4>No items in the cart</h4>
+</ng-template>
