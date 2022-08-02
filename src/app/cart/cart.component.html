@@ -1,5 +1,9 @@
 <h3>Cart</h3>
 
+<h4>
+  <a routerLink="/shipping">Shipping prices</a>
+</h4>
+
 <div *ngIf="items.length > 0; else noItems">
   <div class="cart-item" *ngFor="let item of items">
     <span>{{ item.name }}</span>
